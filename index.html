@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QQ music</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="disk-box">
+    <div class="box-pointer" id="pointer"></div>
+    <div class="box-cover" id="cover">
+      G & Q
+    </div>
+    <div class="control-bar">
+      <button id="pre">上首</button>
+      <button id="play">播放</button>
+      <button id="next">下首</button>
+      <button id="pause">暂停</button>
+    </div>
+  </div>
+
+  <audio id="box" preload="auto"></audio>
+  <div class="play-wrapper">
+    <h2>歌曲列表</h2>
+    <ul class="play-list" id="list"></ul>
+  </div>
+  <script src="./js/list.js"></script>
+  <script src="./js/audio.js"></script>
+</body>
+</html>

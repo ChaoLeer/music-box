@@ -1,0 +1,104 @@
+body {
+  background: #000;
+}
+.disk-box {
+  position: relative;
+  margin: 80px auto;
+  width: 520px;
+  height: 520px;
+  border: 1px solid transparent;
+  background-image: url('../image/bk.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box-cover {
+  width: 380px;
+  height: 380px;
+  text-align: center;
+  line-height: 380px;
+  color: #a3832c;
+  margin: 70px auto;
+  font-size: 28px;
+  font-weight: lighter;
+  background-image: url('../image/disk.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box-pointer {
+  position: absolute;
+  width: 255px;
+  height: 238px;
+  top: 162px;
+  left: 96px;
+  z-index: 6;
+  background-image: url('../image/pointer.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.8s;
+  transform: rotate(-118deg);
+  transform-origin: left top;
+}
+.box-pointer.play {
+  transform: rotate(-95deg);
+}
+.box-cover.play {
+  animation: play 1s linear infinite;
+}
+
+.control-bar {
+  position: absolute;
+  bottom: 0;
+  left: 28px;
+  height: 60px;
+  right: 28px;
+  color: #a3832c;
+}
+.control-bar button {
+  border: 1px solid #a3832c;
+  width:38px;
+  background: transparent;
+  height: 38px;
+  color: #a3832c;
+  font-weight: lighter;
+  background: rgba(0, 0, 0, .6);
+  cursor: pointer;
+  border-radius: 38px;
+  outline: none;
+  box-shadow: -3px 10px 8px #000;
+}
+.control-bar button:active {
+  box-shadow: none;
+  width: 37px;
+  height: 37px;
+  transition: all .3s ease;
+}
+
+ul,li {
+  list-style: none;
+  padding-left: 0;
+}
+.play-wrapper {
+  width: 520px;
+  padding-left: 22px;
+  margin: 10px auto;
+  color: #787878;
+}
+.play-list {
+  padding-left: 18px;
+}
+.play-list li {
+  line-height: 38px;
+}
+.play-list li:hover,
+.play-list li.play {
+  color: #fefefe;
+  cursor: pointer;
+}
+@keyframes play {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
